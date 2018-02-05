@@ -6,21 +6,21 @@ function zipList(l1, l2) {
 
   while (innerl1.length > 0 && innerl2.length > 0) {
     if (current === innerl1) {
-      result.push(l1[0]);
+      result.push(innerl1[0]);
       innerl1 = innerl1.slice(1);
       current = innerl2;
     } else {
-      result.push(l2[0]);
+      result.push(innerl2[0]);
       innerl2 = innerl2.slice(1);
       current = innerl1;
     }
   }
   while (innerl1.length > 0) {
-    result.push(l1[0]);
+    result.push(innerl1[0]);
     innerl1 = innerl1.slice(1);
   }
   while (innerl2.length > 0) {
-    result.push(l2[0]);
+    result.push(innerl2[0]);
     innerl2 = innerl2.slice(1);
   }
   return result;
